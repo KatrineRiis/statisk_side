@@ -11,7 +11,7 @@ function show(data) {
  <div class="item_card">
       <article class="item">
         <div class="grid_1_1">
-          <img src="https://kea-alt-del.dk/t7/images/webp/1000/${data.id}.webp" alt="${data.productdisplayname}" />
+          <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="${data.productdisplayname}" />
 
           <div class="text_wrapper">
             <h1 class="brand">${data.brandname}</h1>
