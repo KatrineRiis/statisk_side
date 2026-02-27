@@ -103,6 +103,11 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  .productlist_img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+
   .product h3 {
     color: #e94f37;
   }
@@ -137,6 +142,10 @@
     font-size: 1.2rem;
   }
 
+  .discounted_price {
+    color: red;
+  }
+
   /****product***/
   .item_card {
     margin-top: 120px;
@@ -156,38 +165,32 @@
     align-items: start;
   }
 
-  /* Product Image */
   .item_card img {
     width: 100%;
     max-width: 700px;
     height: auto;
   }
 
-  /* Right Side Content */
   .text_wrapper {
     display: flex;
     flex-direction: column;
     gap: 5px;
   }
 
-  /* Brand */
   .brand {
     font-size: 1.5rem;
     text-transform: uppercase;
   }
 
-  /* Product Name */
   .item_header {
     font-size: 1.3rem;
     font-weight: bold;
   }
 
-  /* Variant */
   .variantname {
     font-size: 1rem;
   }
 
-  /* Price Section */
   .item_status {
     font-size: 2rem;
     font-weight: bold;
@@ -201,7 +204,6 @@
     text-decoration: line-through;
   }
 
-  /* Stock */
   .stock_status {
     font-size: 1rem;
     font-weight: bold;
@@ -209,7 +211,6 @@
     margin-top: 10px;
   }
 
-  /* Button */
   .item_btn {
     text-decoration: none;
     margin-top: 25px;
@@ -225,7 +226,6 @@
     background-color: #6c6c6c;
   }
 
-  /* Description */
   .description {
     font-size: 1rem;
     margin-top: 10px;
@@ -329,6 +329,10 @@
   .product h3 {
     color: #e94f37;
     margin-bottom: 10px;
+  }
+
+  .discounted_price {
+    color: red;
   }
 
   .btn {
@@ -520,6 +524,10 @@
     color: #e94f37;
     font-size: 1.2rem;
     margin-bottom: 10px;
+  }
+
+  .discounted_price {
+    color: red;
   }
 
   .item_card img {
