@@ -1,4 +1,16 @@
-const listURL = "https://kea-alt-del.dk/t7/api/products?start=10&limit=12";
+/* fetch(fetchUrl)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("Produkter:", data);
+  }); */
+//const listURL = "https://kea-alt-del.dk/t7/api/products?start=10&limit=12";
+
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+console.log(category);
+
+const listURL = category ? `https://kea-alt-del.dk/t7/api/products?category=${encodeURIComponent(category)}&limit=12` : "https://kea-alt-del.dk/t7/api/products";
+
 const listContainer = document.querySelector(".product-gallery");
 
 function getProducts() {
@@ -40,7 +52,7 @@ function showProducts(products) {
 
     listContainer.innerHTML += `
   <article class="product">
-    <h2>${product.brandname}</h2>
+    <h2 class ="brand">${product.brandname}</h2>
     <h3>${product.productdisplayname}</h3>
     <img 
   class="${imageClass}"src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}"/>
@@ -49,7 +61,8 @@ function showProducts(products) {
       ${priceHTML}
     </p>
 
-    <a href="product.html" class="btn">Køb nu</a>
+
+     <a href="product.html?id=${product.id}" class="btn">Køb nu</a>
   </article>
 `;
   });
