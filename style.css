@@ -98,7 +98,7 @@
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 5;
-    padding: 2rem;
+    padding: 0rem;
     border-radius: 8px;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -110,6 +110,8 @@
 
   .product h3 {
     color: #e94f37;
+    margin-left: 10px;
+    max-width: 20ch;
   }
 
   .btn {
@@ -121,11 +123,17 @@
     color: #f6f7eb;
     padding: 5px;
     border-style: solid;
-    margin-right: 100px;
+    margin: 10px;
+    margin-right: 150px;
   }
 
   .btn:hover {
     background-color: #6c6c6c;
+  }
+
+  .sold_out {
+    color: red;
+    font-weight: bold;
   }
 
   /**sale**/
@@ -144,6 +152,8 @@
 
   .discounted_price {
     color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
   /****product***/
@@ -178,9 +188,11 @@
   }
 
   .brand {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: #393e41;
+    margin-left: 10px;
+    margin-top: 10px;
   }
 
   .item_header {
@@ -200,7 +212,7 @@
   }
 
   .item_price {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: gray;
     text-decoration: line-through;
   }
@@ -230,10 +242,21 @@
   .description {
     font-size: 1rem;
     margin-top: 10px;
+    list-style: none;
   }
 
   .gender {
     margin-top: 10px;
+  }
+
+  .regular_price {
+    text-decoration: none;
+    color: #393e41;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .price {
+    margin-left: 10px;
   }
 }
 
@@ -329,7 +352,6 @@
 
   .product h3 {
     color: #e94f37;
-    margin-bottom: 10px;
   }
 
   .discounted_price {
@@ -349,6 +371,11 @@
 
   .btn:hover {
     background-color: #6c6c6c;
+  }
+
+  .sold_out {
+    color: red;
+    font-weight: bold;
   }
 
   .item {
@@ -423,6 +450,14 @@
 
   .description {
     margin-top: 20px;
+    list-style: none;
+  }
+
+  .regular_price {
+    text-decoration: none;
+    color: #393e41;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 }
 
@@ -517,14 +552,27 @@
 
   .product {
     background-color: #f6f7eb;
-    padding: 20px;
+
     border-radius: 8px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #393e41;
+    margin-left: 10px;
+    margin-top: 10px;
   }
 
   .product h3 {
     color: #e94f37;
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .sold_out {
+    color: red;
+    font-weight: bold;
   }
 
   .discounted_price {
@@ -578,12 +626,11 @@
     display: block;
     width: max-content;
     text-decoration: none;
-    font-weight: bold;
     font-size: 1rem;
     background-color: #393e41;
     color: #f6f7eb;
     padding: 10px 20px;
-    margin-top: 10px;
+    margin: 10px;
   }
 
   .item_btn:hover,
@@ -615,6 +662,7 @@
 
   .description {
     padding-top: 20px;
+    list-style: none;
   }
 
   .grid_1_1 {
@@ -625,5 +673,20 @@
 
   .gender {
     margin-top: 10px;
+  }
+
+  .regular_price {
+    text-decoration: none;
+    color: #393e41;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #393e41;
   }
 }

@@ -23,17 +23,18 @@ function show(data) {
     discountedPrice = price;
   }
 
-  let priceHTML;
+  let priceHTML = "";
 
   if (data.soldout === 1) {
-    priceHTML = `<span class="sold_out">Sold out</span>`;
+    // Sold out – no price shown here
+    priceHTML = "";
   } else if (discount) {
     priceHTML = `
-      <s>${price} kr</s>
-      <p class="discounted_price">${discountedPrice.toFixed(0)} kr</p>
-    `;
+    <p class="discounted_price">${discountedPrice.toFixed(0)} kr</p>
+    <p class="old_price">${price} kr</p>  <!-- old price gets line-through -->
+  `;
   } else {
-    priceHTML = `${price} kr`;
+    priceHTML = `<p class="regular_price">${price} kr</p>`; // new class for normal price
   }
 
   productcontainer.innerHTML = `
