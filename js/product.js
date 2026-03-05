@@ -30,7 +30,7 @@ function show(data) {
   } else if (discount) {
     priceHTML = `
     <p class="discounted_price">${discountedPrice.toFixed(0)} kr</p>
-    <p class="old_price">${price} kr</p>  <!-- old price gets line-through -->
+    <p class="old_price">${price} kr</p> 
   `;
   } else {
     priceHTML = `<p class="regular_price">${price} kr</p>`;
@@ -43,19 +43,19 @@ function show(data) {
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="${data.productdisplayname}" />
 
           <div class="text_wrapper">
-            <h1 class="brand">${data.brandname}</h1>
+            <h1 class="item_brand">${data.brandname}</h1>
             <h3 class="item_header">${data.productdisplayname}</h3>
             <h4 class="variantname">${data.variantname}</h4>
             <p class="gender">${data.gender}</p>
             <p class="basecolour">Color: ${data.basecolour}</p>
             <p class="season">${data.season}</p>
             <p class="production">Production year: ${data.productionyear}</p>
-
             <p class="item_price">${priceHTML}</p>
-
-            <p class="stock_status">
-              ${data.soldout === 1 ? "Sold out" : "In stock"}
-            </p>
+            <p class="stock_status"
+            
+   style="color: ${data.soldout === 1 ? "red" : "green"};">
+  ${data.soldout === 1 ? "Sold out" : "In stock"}
+</p>
 
             <a href="product.html" class="item_btn">Tilføj til kurv</a>
             <p class="description">${data.description}</p>
